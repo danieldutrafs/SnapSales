@@ -17,8 +17,8 @@ public class ProdutoService {
     public boolean salvar(String nome, int quantidade, double preco, Categoria categoria) {
 
         if (!ValidadorUtil.validarCampoTexto(nome)
-                || !ValidadorUtil.validarCampoInt(quantidade)
-                || !ValidadorUtil.validarCampoDouble(preco)) {
+            || !ValidadorUtil.validarCampoInt(quantidade)
+            || !ValidadorUtil.validarCampoDouble(preco)) {
             System.out.println("Erro: dados do produtos inválidos");
             return false;
         }
