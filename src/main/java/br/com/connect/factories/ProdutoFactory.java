@@ -9,7 +9,11 @@ import br.com.connect.models.Produto;
  */
 public class ProdutoFactory {
 
-    public static Produto criarProduto(long id, String nomeProduto, int quantidade, double preco, Categoria categoria) {
-        return new Produto(id, nomeProduto, quantidade, preco, categoria);
+    private static long contadorId = 1; // Contador estático
+
+    public static Produto criarProduto(String nome, int qtd, double preco, Categoria cat) {
+        // O objeto já nasce com ID gerado
+        return new Produto(contadorId++, nome, qtd, preco, cat);
     }
 }
+
