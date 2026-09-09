@@ -73,5 +73,55 @@ public class SaborEmOrdemConnect {
         } else {
             System.out.println("\n=== FALHA NO TESTE DA ENCOMENDA ===");
         }
+        
+        //Resultados
+        
+        System.out.println("\n====Cliente====");   
+        System.out.println("Nome: " + cliente.getNomeCliente());
+        System.out.println("Telefone: " + cliente.getTelefone());
+        
+        System.out.println("\n====Produto====");
+        System.out.println("Nome: " + produto.getNomeProduto());
+        System.out.println("Quantidade: " + produto.getQuantidade());
+        System.out.println("Valor: " + produto.getPreco());
+        System.out.println("Categoria: " + produto.getCategoria());
+        
+        System.out.println("\n====Movimentação de Estoque====");
+        System.out.println("ID: " + moviEstoque.getId());
+        System.out.println("Produto: " + moviEstoque.getProduto().getNomeProduto());
+        System.out.println("Quantidade movimentada: " + moviEstoque.getQuantidade());
+        System.out.println("É entrada?: " + moviEstoque.isTipoMovimentacao());
+        
+        System.out.println("\n====Movimentação de Estoque====");
+        System.out.println("ID: " + moviEstoque.getId());
+        System.out.println("Produto: " + moviEstoque.getProduto().getNomeProduto());
+        System.out.println("Quantidade movimentada: " + moviEstoque.getQuantidade());
+        System.out.println("É entrada?: " + moviEstoque.isTipoMovimentacao());
+        
+        System.out.println("\n====Encomenda====");
+        System.out.println("ID: " + novaEncomendaTeste.getId());
+        System.out.println("Cliente: " + novaEncomendaTeste.getCliente().getNomeCliente());
+        System.out.println("Status: " + novaEncomendaTeste.getStatus());
+        System.out.println("Valor Total: R$ " + novaEncomendaTeste.getValorTotal());
+        System.out.println("Valor de Entrada: R$ " + novaEncomendaTeste.getValorEntrada());
+        System.out.println("Forma de Pagamento: " + novaEncomendaTeste.getPagamento().getFormaPagamento());
+        
+        System.out.println("\n---Itens da Encomenda---");
+        for (ItemEncomenda itemEncomenda : novaEncomendaTeste.getItens()) {
+            System.out.println("- Produto: " + itemEncomenda.getProduto().getNomeProduto() 
+                             + " | Qtd: " + itemEncomenda.getQuantidadeItem() 
+                             + " | Preço un: R$ " + itemEncomenda.getPrecoMomento());
+        }
+
+        System.out.println("\n---Tipo de Recebimento---");
+        if (novaEncomendaTeste.isRetirada()) {
+            System.out.println("Tipo: Retirada no Local");
+        } else {
+            System.out.println("Tipo: Entrega");
+            System.out.println("Endereço: " + novaEncomendaTeste.getEntrega().getEndereco());
+            System.out.println("Recebedor: " + novaEncomendaTeste.getEntrega().getDestinatario());
+            System.out.println("Taxa de Frete: R$ " + novaEncomendaTeste.getEntrega().getFrete());
+            System.out.println("Data Prevista: " + novaEncomendaTeste.getEntrega().getDataEntrega());
+        } 
     }
 }
