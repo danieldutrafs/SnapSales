@@ -13,24 +13,23 @@ public class ClienteService {
     private ClienteRepository clienteRepository = new ClienteRepository();
     private static long geradorId = 1;
 
-    public boolean salvar(String nomeCliente, String telefone) {
+    public boolean salvar(Clientes cliente) {
         
-        if (!ValidadorUtil.validarCampoTexto(nomeCliente)) {
+        if (!ValidadorUtil.validarCampoTexto(cliente.getNomeCliente())) {
             System.out.println("Erro: O nome do cliente não pode estar vazio.");
             return false;
         }
         
-        String telefoneLimpo = limparTelefone(telefone);
+        String telefoneLimpo = limparTelefone(cliente.getTelefone());
         if (telefoneLimpo.length() != 10 && telefoneLimpo.length() != 11) {
             System.out.println("Erro: Telefone inválido. Deve conter 10 ou 11 dígitos numéricos.");
             return false;
         }
+        cliente.setId(geradorId++);
+        cliente.setTelefone(telefoneLimpo);        
+        clienteRepository.salvarCliente(cliente);
         
-        Clientes novoCliente = new Clientes(geradorId++, nomeCliente.trim(), telefoneLimpo);
-        
-        clienteRepository.salvarCliente(novoCliente);
-        
-        System.out.println("Cliente cadastrado com sucesso! ID: " + novoCliente.getId());
+        System.out.println("Cliente cadastrado com sucesso! ID: " + cliente.getId());
         return true;
     }
 

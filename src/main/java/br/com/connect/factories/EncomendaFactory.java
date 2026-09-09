@@ -1,4 +1,4 @@
-package br.com.connect.models.factories;
+package br.com.connect.factories;
 
 import br.com.connect.models.Clientes;
 import br.com.connect.models.Encomenda;
@@ -38,6 +38,8 @@ public class EncomendaFactory {
               totalCalculo   += item.getPrecoMomento() * item.getQuantidadeItem();
            }
        }
+       
+       encomenda.setValorTotal(totalCalculo);
 
        //Vinculo bidirecional dos itens
        if(itens != null){

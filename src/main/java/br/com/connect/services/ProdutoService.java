@@ -13,22 +13,22 @@ import br.com.connect.utils.ValidadorUtil;
 public class ProdutoService {
 
     private ProdutoRepository repository = new ProdutoRepository();
+    private static long geradorId = 1;
 
-    public boolean salvar(String nome, int quantidade, double preco, Categoria categoria) {
+    public boolean salvar(Produto produto) {
 
-        if (!ValidadorUtil.validarCampoTexto(nome)
-            || !ValidadorUtil.validarCampoInt(quantidade)
-            || !ValidadorUtil.validarCampoDouble(preco)) {
+        if (!ValidadorUtil.validarCampoTexto(produto.getNomeProduto())
+            || !ValidadorUtil.validarCampoInt(produto.getQuantidade())
+            || !ValidadorUtil.validarCampoDouble(produto.getPreco())) {
             System.out.println("Erro: dados do produtos inválidos");
             return false;
         }
 
-        if (categoria == null || !ValidadorUtil.validarCampoTexto(categoria.getNomeCategoria())) {
+        if (produto.getCategoria() == null || !ValidadorUtil.validarCampoTexto(produto.getCategoria().getNomeCategoria())) {
             System.out.println("Erro: O produto precisa estar associado a uma categoria!");
             return false;
         }
-        Produto produto = ProdutoFactory.criarProduto(nome, quantidade, preco, categoria);
-        
+        produto.setId(geradorId++);
         repository.salvarProduto(produto);
         System.out.println("Produto cadastrado junto a categoria!");
         return true;
