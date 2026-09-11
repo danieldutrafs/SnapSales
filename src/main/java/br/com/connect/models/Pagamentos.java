@@ -13,6 +13,9 @@ public class Pagamentos {
         this.formaPagamento = formaPagamento;
     }
 
+    public Pagamentos() {
+    }
+
     public long getId() {
         return id;
     }

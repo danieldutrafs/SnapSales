@@ -27,6 +27,9 @@ public class Encomenda {
         this.retirada = retirada;
     }
 
+    public Encomenda() {
+    }
+
     public long getId() {
         return id;
     }
