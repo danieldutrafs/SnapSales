@@ -17,6 +17,9 @@ public class MovimentacaoEstoque {
         this.tipoMovimentacao = tipoMovimentacao;
     }
 
+    public MovimentacaoEstoque() {
+    }
+    
     public long getId() {
         return id;
     }

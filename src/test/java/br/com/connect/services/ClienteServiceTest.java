@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ClienteServiceTest {
 
-   private ClienteService servico;
+    private ClienteService servico;
     private Clientes cliente;
 
     @BeforeEach
@@ -23,7 +23,7 @@ public class ClienteServiceTest {
         servico = new ClienteService();
         cliente = new Clientes();
     }
-    
+
     @Test
     public void deveAprovarCliente() {
         //Arrange
@@ -32,23 +32,23 @@ public class ClienteServiceTest {
         //Act
         boolean resultado = servico.salvar(cliente);
         //Assert
-        Assertions.assertTrue(resultado, "O cliente deveria ser salvo pois os dados são ");
+        Assertions.assertTrue(resultado, "O cliente deveria ser salvo pois os dados são válidos");
     }
-    
+
     @Test
-    public void deveBarraNomeCliente(){
+    public void deveBarraNomeCliente() {
         //Arrange
         cliente.setNomeCliente("");
         cliente.setTelefone("5188888888");
         //Act
         boolean resultado = servico.salvar(cliente);
-        
+
         //Assert
         Assertions.assertFalse(resultado, "O cleinte deve ser rejeitado pois o nome está vazio");
     }
-    
+
     @Test
-    public void deveBarrarTelefoneVazio(){
+    public void deveBarrarTelefoneVazio() {
         //Arrange 
         cliente.setNomeCliente("Arthur");
         cliente.setTelefone("");
@@ -57,9 +57,9 @@ public class ClienteServiceTest {
         //Assert
         Assertions.assertFalse(resultado, "O cliente deve ser reiejitado pois o telefone está em branco");
     }
-    
+
     @Test
-    public void deveBarrarTelefoneIncompleto(){
+    public void deveBarrarTelefoneIncompleto() {
         //Arrange
         cliente.setNomeCliente("Ëduardo");
         cliente.setTelefone("51999");
