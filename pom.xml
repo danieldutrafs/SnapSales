@@ -36,4 +36,5 @@
         <maven.compiler.release>26</maven.compiler.release>
         <exec.mainClass>br.com.connect.saboremordemconnect.SaborEmOrdemConnect</exec.mainClass>
     </properties>
+    <name>SnapSales</name>
 </project>
