@@ -14,6 +14,9 @@ public class Clientes {
         this.nomeCliente = nomeCliente;
         this.telefone = telefone;
     }
+    
+    public Clientes(){
+    }
 
     public long getId() {
         return id;
