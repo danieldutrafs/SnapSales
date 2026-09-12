@@ -1,4 +1,4 @@
-package br.com.snapsalesrepositories;
+package br.com.snapsales.repositories;
 
 import br.com.snapsales.models.Produto;
 import java.util.ArrayList;

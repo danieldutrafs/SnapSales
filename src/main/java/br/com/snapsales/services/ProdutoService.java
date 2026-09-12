@@ -3,7 +3,7 @@ package br.com.snapsales.services;
 import br.com.snapsales.factories.ProdutoFactory;
 import br.com.snapsales.models.Categoria;
 import br.com.snapsales.models.Produto;
-import br.com.snapsalesrepositories.ProdutoRepository;
+import br.com.snapsales.repositories.ProdutoRepository;
 import br.com.snapsales.utils.ValidadorUtil;
 
 /**

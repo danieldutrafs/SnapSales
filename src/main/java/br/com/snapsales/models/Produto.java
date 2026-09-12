@@ -1,7 +1,5 @@
 package br.com.snapsales.models;
 
-import br.com.snapsales.models.Categoria;
-
 /**
  *
  * @author auxiliar.tirs

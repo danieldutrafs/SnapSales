@@ -6,7 +6,7 @@ import br.com.snapsales.models.Entrega;
 import br.com.snapsales.models.ItemEncomenda;
 import br.com.snapsales.models.Pagamentos;
 import br.com.snapsales.factories.EncomendaFactory;
-import br.com.snapsalesrepositories.EncomendaRepository;
+import br.com.snapsales.repositories.EncomendaRepository;
 import br.com.snapsales.utils.ValidadorUtil;
 import java.util.List;
 

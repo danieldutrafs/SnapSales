@@ -1,6 +1,5 @@
 package br.com.snapsales.services;
 
-import br.com.snapsales.services.MovimentacaoService;
 import br.com.snapsales.models.MovimentacaoEstoque;
 import br.com.snapsales.models.Produto;
 import org.junit.jupiter.api.AfterEach;

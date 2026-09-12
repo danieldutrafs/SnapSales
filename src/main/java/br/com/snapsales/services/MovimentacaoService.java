@@ -2,7 +2,7 @@ package br.com.snapsales.services;
 
 import br.com.snapsales.models.MovimentacaoEstoque;
 import br.com.snapsales.models.Produto;
-import br.com.snapsalesrepositories.MovimentacaoRepository;
+import br.com.snapsales.repositories.MovimentacaoRepository;
 import br.com.snapsales.utils.ValidadorUtil;
 
 /**

@@ -1,4 +1,4 @@
-package br.com.connect;
+package br.com.snapsale;
 
 import br.com.snapsales.factories.ProdutoFactory;
 import br.com.snapsales.models.Categoria;
@@ -9,8 +9,8 @@ import br.com.snapsales.models.ItemEncomenda;
 import br.com.snapsales.models.MovimentacaoEstoque;
 import br.com.snapsales.models.Pagamentos;
 import br.com.snapsales.models.Produto;
-import br.com.snapsalesrepositories.CategoriaRepository;
-import br.com.snapsalesrepositories.ProdutoRepository;
+import br.com.snapsales.repositories.CategoriaRepository;
+import br.com.snapsales.repositories.ProdutoRepository;
 import br.com.snapsales.services.ClienteService;
 import br.com.snapsales.services.EncomendaService;
 import br.com.snapsales.services.MovimentacaoService;

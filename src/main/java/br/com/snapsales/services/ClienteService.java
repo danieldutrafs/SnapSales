@@ -1,7 +1,7 @@
 package br.com.snapsales.services;
 
 import br.com.snapsales.models.Clientes;
-import br.com.snapsalesrepositories.ClienteRepository;
+import br.com.snapsales.repositories.ClienteRepository;
 import br.com.snapsales.utils.ValidadorUtil;
 
 /**
